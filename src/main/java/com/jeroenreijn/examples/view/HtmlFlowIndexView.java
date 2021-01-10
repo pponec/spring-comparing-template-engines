@@ -9,6 +9,7 @@ import com.jeroenreijn.examples.model.Presentation;
 
 import htmlflow.DynamicHtml;
 import htmlflow.HtmlView;
+import org.springframework.web.util.HtmlUtils;
 
 public class HtmlFlowIndexView {
 	public static final HtmlView<Map<String, Object>> view = DynamicHtml
@@ -48,7 +49,7 @@ public class HtmlFlowIndexView {
 											.h5()
 												.of(h5 -> h5
 													.attrClass("card-title")
-													.text(presentation.getTitle() + " - " + presentation.getSpeakerName())
+													.text(HtmlUtils.htmlEscape(presentation.getTitle() + " - " + presentation.getSpeakerName())) 
 												)
 											.__() // h5
 										.__() // div

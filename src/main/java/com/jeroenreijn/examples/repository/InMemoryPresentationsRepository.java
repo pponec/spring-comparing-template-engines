@@ -17,7 +17,7 @@ public class InMemoryPresentationsRepository implements PresentationsRepository 
 		Presentation preso1 = new Presentation();
 		preso1.setId(counter.incrementAndGet());
 		preso1.setTitle("Shootout! Template engines on the JVM");
-		preso1.setSpeakerName("Jeroen Reijn");
+		preso1.setSpeakerName("Jeroen Reijn <c>");
 		preso1.setSummary(
 				"Are you still using JavaServer Pages as your main template language? With the popularity of template engines for other languages like Ruby and Scala and the shift in doing more MVC in the browser there are quite some new and interesting new template languages available for the JVM. During this session we will take a look at the less known, but quite interesting new template engines and see how they compare with the industries standards.");
 

@@ -4,6 +4,7 @@
 
 This is a demo project, which accompanied my ["Shoot-out! Template engines for the JVM"](http://www.slideshare.net/jreijn/comparing-templateenginesjvm) presentation, which shows the differences among several Java template engines in combination with Spring MVC. Template engines used in this project are:
 
+* [Ujorm](https://github.com/pponec/ujorm) - v2.10
 * JSP + [JSTL](https://jstl.java.net/) - v1.2
 * [Freemarker](http://www.freemarker.org/) - v2.3.28.RELEASE
 * [Velocity](http://velocity.apache.org/) - v1.7
@@ -38,6 +39,7 @@ Run the project with
 
 See the demo URLs:
 
+  - http://localhost:8080/ujorm
   - http://localhost:8080/jsp or http://localhost:8080/
   - http://localhost:8080/freemarker
   - http://localhost:8080/velocity
@@ -64,6 +66,7 @@ See the demo URLs:
 In case you want to benchmark the different template engines I would recommend using Apache HTTP server benchmarking tool or Siege an HTTP/HTTPS stress tester.
 You can try any of the following URLs.
 
+    $ ab -n 10000 -c 10 http://localhost:8080/ujorm
     $ ab -n 10000 -c 10 http://localhost:8080/jsp
     $ ab -n 10000 -c 10 http://localhost:8080/velocity
     $ ab -n 10000 -c 10 http://localhost:8080/freemarker
@@ -152,6 +155,7 @@ Velocity                27.49 seconds
 Pebble                  25.63 seconds
 HTTL                    22.86 seconds
 jTwig                   21.23 seconds
+Ujorm                       ? seconds
 Liqp                    19.60 seconds
 Ickenham                19.50 seconds
 Thymeleaf               18.33 seconds

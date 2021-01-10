@@ -242,6 +242,15 @@ public class WebMvcConfig implements ApplicationContextAware, WebMvcConfigurer {
 	}
 
 	@Bean
+	public ViewResolver ujormViewResolver() {
+		UjormResolver viewResolver = new UjormResolver();
+		viewResolver.setViewNames("*-ujorm");
+		viewResolver.setCache(false);
+
+		return viewResolver;
+	}
+        
+	@Bean
 	public ViewResolver trimouViewResolver() {
 		MessageSource messageSource = applicationContext.getBean(MessageSource.class);
 		TrimouViewResolver viewResolver = new TrimouViewResolver(messageSource);
